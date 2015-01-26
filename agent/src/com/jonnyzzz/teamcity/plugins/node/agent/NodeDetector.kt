@@ -31,6 +31,7 @@ import java.io.File
 import com.jonnyzzz.teamcity.plugins.node.common.NVMBean
 import com.jonnyzzz.teamcity.plugins.node.common.NPMBean
 import com.jonnyzzz.teamcity.plugins.node.common.GruntBean
+import com.jonnyzzz.teamcity.plugins.node.common.BowerBean
 
 /**
  * Created by Eugene Petrenko (eugene.petrenko@gmail.com)
@@ -99,6 +100,10 @@ public class NodeToolsDetector(events: EventDispatcher<AgentLifeCycleListener>,
 
         detectNodeTool("grunt", GruntBean().gruntConfigurationParameter) {
           it.trimStart("grunt-cli").trim().trimStart("v")
+        }
+
+        detectNodeTool("bower", BowerBean().bowerConfigurationParameter) {
+          it.trimStart("bower").trim().trimStart("v")
         }
 
         detectNodeTool("gulp", GulpBean().gulpConfigurationParameter) {

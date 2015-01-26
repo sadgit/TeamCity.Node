@@ -6,6 +6,7 @@ This is a plugin for TeamCity that provides following build runners
 - [NPM](https://npmjs.org/)
 - [Phantom.JS](http://phantomjs.org) 
 - [Grunt](http://gruntjs.com)
+- [Bower](http://bower.io)
 - [NVM](https://github.com/creationix/nvm)
 
 
@@ -23,6 +24,7 @@ Features
  - `node.js NVM Installer` build runner to install/update to selected version of Node.js
  - `Phantom.JS` build runner to run `.js`, `.coffee` (or other script) file or source code.
  - `Grunt` build runner to run your grunt scripts. It's assumes you have `grunt` and `grunt-cli` NPM packages installed to local repo
+ - `Bower` build runner to run your bower scripts. It's assumes you have `bower` NPM package installed to local repo
 
 
 License
